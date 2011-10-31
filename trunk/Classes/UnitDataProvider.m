@@ -9,6 +9,8 @@
 #import "Constants.h"
 #import "FactoryProvider.h"
 
+// V.v. kontakta VGR för URL:er för data 
+
 @implementation UnitDataProvider
 
 @synthesize responseData;
@@ -50,7 +52,9 @@
 }
 //Vårdmottagning
 -(void) getCareUnits {	
-		NSString *urlMethod = @"http://tycktill.vgregion.se/hriv-mobile-ws/getCareUnits.json";
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"Security" ofType:@"plist"];
+    NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *urlMethod = [plistDictionary objectForKey:@"CARE_UNITS_URL"];
 
 	if (careUnits == nil) 
 	{
@@ -64,9 +68,10 @@
 }
 
 //Jourmottagning
--(void *)getDutyUnits{
-
-		NSString *urlMethod = @"http://tycktill.vgregion.se/hriv-mobile-ws/getDutyUnits.json";
+-(void *)getDutyUnits {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"Security" ofType:@"plist"];
+    NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *urlMethod = [plistDictionary objectForKey:@"DUTY_UNITS_URL"];
 
 	if (dutyUnits == nil) {
 		dutyUnits = [[NSMutableDictionary alloc] init];
@@ -79,9 +84,10 @@
 }
 
 	//Akutmottagning
-- (void) getEmergencyUnits
-{
-		NSString *urlMethod = @"http://tycktill.vgregion.se/hriv-mobile-ws/getEmergencyUnits.json";	
+- (void) getEmergencyUnits {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"Security" ofType:@"plist"];
+    NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *urlMethod = [plistDictionary objectForKey:@"EMERGENCY_UNITS_URL"];
 	
 	if (emergencyUnits == nil) {
 		emergencyUnits = [[NSMutableDictionary alloc] init];

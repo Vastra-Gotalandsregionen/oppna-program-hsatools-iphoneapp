@@ -24,6 +24,7 @@
 		4BB2BA5411C9FF0D004BDB17 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2BA4D11C9FF0D004BDB17 /* MapViewController.m */; };
 		4BB2BA5611C9FF0D004BDB17 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2BA5111C9FF0D004BDB17 /* SelectionViewController.m */; };
 		4BFB8113123A591A00712095 /* MultipleStringObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB8112123A591A00712095 /* MultipleStringObject.m */; };
+		6547C13E145EB98A00CDEEDD /* Security.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6547C13D145EB98A00CDEEDD /* Security.plist */; };
 		973DDAD411C22F5E0085B238 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DDAD311C22F5E0085B238 /* MapKit.framework */; };
 		978A679D11C9FFDF000E6367 /* FactoryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A679C11C9FFDF000E6367 /* FactoryProvider.m */; };
 		97C2890611CBB8470035741B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C288FA11CBB8460035741B /* Constants.m */; };
@@ -87,6 +88,7 @@
 		4BB2BA5111C9FF0D004BDB17 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectionViewController.m; path = Classes/SelectionViewController.m; sourceTree = SOURCE_ROOT; };
 		4BFB8111123A591A00712095 /* MultipleStringObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleStringObject.h; sourceTree = SOURCE_ROOT; };
 		4BFB8112123A591A00712095 /* MultipleStringObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleStringObject.m; sourceTree = SOURCE_ROOT; };
+		6547C13D145EB98A00CDEEDD /* Security.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Security.plist; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* HRIVIPhoneApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HRIVIPhoneApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		973DDAD311C22F5E0085B238 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		978A679B11C9FFDF000E6367 /* FactoryProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FactoryProvider.h; path = Classes/FactoryProvider.h; sourceTree = SOURCE_ROOT; };
@@ -185,6 +187,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6547C13D145EB98A00CDEEDD /* Security.plist */,
 				A1E82FA713791BE100BB844F /* Icon.png */,
 				A1E82FA813791BE100BB844F /* Icon@2x.png */,
 				051CCF3A11D8854A007ACD69 /* MapView.xib */,
@@ -413,6 +416,7 @@
 				A125604413C1A84A0062340E /* stangt_symbol@2x.png in Resources */,
 				A125604513C1A84A0062340E /* vardcentral.png in Resources */,
 				A125604613C1A84A0062340E /* vardcentral@2x.png in Resources */,
+				6547C13E145EB98A00CDEEDD /* Security.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
