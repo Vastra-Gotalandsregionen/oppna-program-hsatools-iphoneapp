@@ -7,5 +7,5 @@ Systemet är byggt enligt Öppna Programs Referensarkitekturens, för mer om den
 
 =Innehåll=
 
-* PresentationHrivIphoneApp
-* BeskrivningHrivIphoneApp
+ * PresentationHrivIphoneApp
+ * BeskrivningHrivIphoneApp
