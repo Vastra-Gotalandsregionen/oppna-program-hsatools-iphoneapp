@@ -1,3 +1,5 @@
+#summary Dokumentation till iPhone applikationen Hitta Vård Nu.
+
 = Hitta vård =
 
 Hitta vård nu iPhone App hjälper dig hitta närmaste vårdcentral, jourcentral och akutmottagning i Västra Götaland. Du får reda på om mottagningen är öppen och hur du hittar dit. Du får också hjälp att komma i kontakt med mottagningen via telefon eller webb. Alla mottagningar är offentligt finansierade. 
