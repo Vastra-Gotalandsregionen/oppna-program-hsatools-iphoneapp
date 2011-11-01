@@ -1,13 +1,11 @@
-#summary One-sentence summary of this page.
+Introduktion till projektet _*Hitta Vård nu*_
+Nedan följer en beskrivning av projektet Hitta Vård nu som har utförts av Know IT åt VGR.
 
-= Introduction =
+Projektet Hitta Vård nu är det projekt som tagit fram iPhone appen med samma syfte.
 
-Add your content here.
+Systemet är byggt enligt Öppna Programs Referensarkitekturens, för mer om den se Introduktion till Referensarkitektur
 
+=Innehåll=
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+PresentationHrivIphoneApp
+BeskrivningHrivIphoneApp
