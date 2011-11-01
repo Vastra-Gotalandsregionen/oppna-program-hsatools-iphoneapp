@@ -1,3 +1,5 @@
+#summary Dokumentation till iPhone applikationen Hitta Vård Nu.
+
 Introduktion till projektet _*Hitta Vård nu*_
 Nedan följer en beskrivning av projektet Hitta Vård nu som har utförts av Know IT åt VGR.
 
