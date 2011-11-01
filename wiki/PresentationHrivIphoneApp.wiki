@@ -1,13 +1,27 @@
-#summary One-sentence summary of this page.
+= Hitta vård =
 
-= Introduction =
+Hitta vård nu iPhone App hjälper dig hitta närmaste vårdcentral, jourcentral och akutmottagning i Västra Götaland. Du får reda på om mottagningen är öppen och hur du hittar dit. Du får också hjälp att komma i kontakt med mottagningen via telefon eller webb. Alla mottagningar är offentligt finansierade. 
 
-Add your content here.
+Appen använder din position för att ta reda på avståndet till mottagningarna. Listan visar mottagningarna närmast dig och uppdateras medan du flyttar dig. 
 
+Kartläget visar varje mottagning med en knappnål. Grön knappnål är öppen mottagning och grå knappnål är stängd. Om du klickar på knappnålen får du fram mottagningens namn och adress. Du kan även få telefonnummer, fler detaljer om mottagningen samt en vägvisning. 
 
-= Details =
+Vill du söka hela vårdutbudet i Västra Götaland, gå till sökfunktionen Hitta rätt i vården.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+_Beskrivning från: http://itunes.apple.com/
+
+Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
+
+= Skärmdumpar =
+
+== Hitta vård: ==
+http://oppna-program-hsatools-iphoneapp.googlecode.com/files/hitta-vård.png
+
+== Vårdcentraler på karta: ==
+http://oppna-program-hsatools-iphoneapp.googlecode.com/files/vårdcentraler-karta.png
+
+== Jourmottagningar i lista: ==
+http://oppna-program-hsatools-iphoneapp.googlecode.com/files/jourmottagningar-lista.png
+
+== Detaljer: ==
+http://oppna-program-hsatools-iphoneapp.googlecode.com/files/information.png
