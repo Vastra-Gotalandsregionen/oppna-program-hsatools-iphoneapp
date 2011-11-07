@@ -82,6 +82,6 @@ Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att
 
 == Produktionsserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter, se exempel GetEmergencyUnits || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter, se exempel GetCareUnits || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter, se exempel GetDutyUnits || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
