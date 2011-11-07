@@ -76,9 +76,9 @@ Följande adresser anrops från mobilapplikationen för att hämta information o
 
 == Stagingserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
 Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att visas som en aktumottagning i klienter, inklusive iPhone-appen.
 
 == Produktionsserver ==
