@@ -14,7 +14,7 @@ _Beskrivning från: http://itunes.apple.com/
 
 Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
 
-= Skärmdumpar =
+= Bilder =
 
 == Hitta vård: ==
 http://oppna-program-hsatools-iphoneapp.googlecode.com/files/hitta-vård.png
