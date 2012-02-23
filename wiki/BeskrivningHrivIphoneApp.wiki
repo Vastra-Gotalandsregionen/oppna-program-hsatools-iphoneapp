@@ -70,19 +70,25 @@ iPhone App Version 0.1 2010-11-01: JSON - [http://code.google.com/p/json-framewo
 Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller placeholders för URL:er som använda för att hämta data från backend. Kontakta VGR för att få en Security.plist med fullständiga URL:er.
 
 = REST Webservice / Backend =
-I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst). Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten måste vara betrott för att handskakningen ska vara möjligt. Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte.
+I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst). Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten måste vara betrott för att handskakningen ska vara möjligt. Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar.
 
 Följande adresser anrops från mobilapplikationen för att hämta information om vårdenheter:
 
 == Stagingserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekt, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
 Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att visas som en aktumottagning i klienter, inklusive iPhone-appen.
 
 == Produktionsserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekter, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekter, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekter, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekt, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
