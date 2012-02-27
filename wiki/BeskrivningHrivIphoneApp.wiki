@@ -67,7 +67,7 @@ iPhone App Version 0.1 2010-11-01: JSON - [http://code.google.com/p/json-framewo
     # Din iPhone
 
 = Security.plist =
-Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller placeholders för URL:er som använda för att hämta data från backend. Kontakta VGR för att få en Security.plist med fullständiga URL:er.
+Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller placeholders för URL:er som använda för att hämta data från backend. Kontakta Marcus Österberg (marcus.osterberg@vgregion.se) på VGR för att få en Security.plist med fullständiga URL:er.
 
 = REST Webservice / Backend =
 I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst). Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten måste vara betrott för att handskakningen ska vara möjligt. Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar.
