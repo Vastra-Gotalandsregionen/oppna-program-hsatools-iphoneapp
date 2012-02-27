@@ -12,7 +12,7 @@ Informationen i applikationen hämtas från en webbservice som i sin tur läser 
 || 0,2 || 0,2 || DO || 2011-10-28 || Publicerat version 2.0 av appen med bland annat nya färger. ||
 || 0,3 || 0,3 || DO || 2011-11-01 || Flyttat och uppdaterat dokumentation. Källkod finns nu i SVN. ||
 || 0,4 || 0,3 || DO || 2011-11-07 || La till exempel på JSON-objekt. ||
-
+|| 0,6 || 0,3 || DO || 2012-02-27 || La till Marcus Österberg som kontaktperson på VGR. ||
 
 = Kontaktinformation =
 || *Namn* || *Roll/Funktion* || *Företag/organisation* || *Telefon* || *E-post* ||
