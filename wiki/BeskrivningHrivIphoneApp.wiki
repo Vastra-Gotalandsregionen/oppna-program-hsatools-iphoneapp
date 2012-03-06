@@ -13,6 +13,7 @@ Informationen i applikationen hämtas från en webbservice som i sin tur läser 
 || 0,3 || 0,3 || DO || 2011-11-01 || Flyttat och uppdaterat dokumentation. Källkod finns nu i SVN. ||
 || 0,4 || 0,3 || DO || 2011-11-07 || La till exempel på JSON-objekt. ||
 || 0,6 || 0,3 || DO || 2012-02-27 || La till Marcus Österberg som kontaktperson på VGR. ||
+|| 0,7 || 0,3 || PB || 2012-03-06 || Uppdaterade url:erna för JSONP-anrop ||
 
 = Kontaktinformation =
 || *Namn* || *Roll/Funktion* || *Företag/organisation* || *Telefon* || *E-post* ||
@@ -77,18 +78,18 @@ Följande adresser anrops från mobilapplikationen för att hämta information o
 == Stagingserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekt, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
 Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att visas som en aktumottagning i klienter, inklusive iPhone-appen.
 
 == Produktionsserver ==
 || *End-point* || *Returnerar* || *Beskrivning* ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekt, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
-|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits/jsonp.json?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
+|| [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
