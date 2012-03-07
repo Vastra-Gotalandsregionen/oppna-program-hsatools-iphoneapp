@@ -14,6 +14,7 @@ Informationen i applikationen hämtas från en webbservice som i sin tur läser 
 || 0,4 || 0,3 || DO || 2011-11-07 || La till exempel på JSON-objekt. ||
 || 0,6 || 0,3 || DO || 2012-02-27 || La till Marcus Österberg som kontaktperson på VGR. ||
 || 0,7 || 0,3 || PB || 2012-03-06 || Uppdaterade url:erna för JSONP-anrop ||
+|| 0,8 || 0,3 || PB || 2012-03-07 || Lagt till Hans Gyllensten och Susanne Lindqvist som kontaktpersoner för URL:er. ||
 
 = Kontaktinformation =
 || *Namn* || *Roll/Funktion* || *Företag/organisation* || *Telefon* || *E-post* ||
@@ -73,10 +74,10 @@ Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller pla
 = REST Webservice / Backend =
 I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst). Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten måste vara betrott för att handskakningen ska vara möjligt. Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar.
 
-Följande adresser anrops från mobilapplikationen för att hämta information om vårdenheter:
+Följande adresser anropas från mobilapplikationen för att hämta information om vårdenheter:
 
 == Stagingserver ==
-|| *End-point* || *Returnerar* || *Beskrivning* ||
+|| *End-point`*`* || *Returnerar* || *Beskrivning* ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
@@ -86,10 +87,12 @@ Följande adresser anrops från mobilapplikationen för att hämta information o
 Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att visas som en aktumottagning i klienter, inklusive iPhone-appen.
 
 == Produktionsserver ==
-|| *End-point* || *Returnerar* || *Beskrivning* ||
+|| *End-point`*`* || *Returnerar* || *Beskrivning* ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json] || Lista med JSON-objekt, se exempel GetEmergencyUnitsJson || Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json] || Lista med JSON-objekt, se exempel GetCareUnitsJson || Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp || Se föregående ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json] || Lista med JSON-objekt, se exempel GetDutyUnitsJson || Hämtar information för alla jourcentraler som finns i Västra Götalandsregion ||
 || [http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.jsonp?callback={someCallbackFunction}] || Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp || Se föregående ||
+
+`*` Kontakta hans.gyllensten (at) vgregion.se eller susanne.e.lindqvist (at) vgregion.se för de fullständiga URL:erna.
