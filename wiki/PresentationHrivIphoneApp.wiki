@@ -16,14 +16,25 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
 
 = Bilder =
 
-== Hitta vård: ==
-http://oppna-program-hsatools-iphoneapp.googlecode.com/files/hitta-vård.png
-
-== Vårdcentraler på karta: ==
-http://oppna-program-hsatools-iphoneapp.googlecode.com/files/vårdcentraler-karta.png
-
-== Jourmottagningar i lista: ==
-http://oppna-program-hsatools-iphoneapp.googlecode.com/files/jourmottagningar-lista.png
-
-== Detaljer: ==
-http://oppna-program-hsatools-iphoneapp.googlecode.com/files/information.png
+<table>
+  <tr>
+    <td>Hitta vård</td>
+    <td>Vårdcentraler på karta</td>
+  </tr>
+  <tr>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/hitta-vard-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/vårdcentraler-karta-small.png</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jourmottagningar i lista</td>
+    <td>Detaljer</td>
+  </tr>
+  <tr>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/jourmottagningar-lista-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/information-small.png</td>
+  </tr>
+</table>
