@@ -26,8 +26,8 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
     <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/vårdcentraler-karta-small.png</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
   </tr>
   <tr>
     <td>Jourmottagningar i lista</td>
