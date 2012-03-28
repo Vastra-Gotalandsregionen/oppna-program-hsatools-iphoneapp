@@ -18,8 +18,8 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
 
 <table>
   <tr>
-    <td>Hitta vård</td>
-    <td>Vårdcentraler på karta</td>
+    <td>*Hitta vård*</td>
+    <td>*Vårdcentraler på karta*</td>
   </tr>
   <tr>
     <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/hitta-vard-small.png</td>
@@ -28,8 +28,8 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
 </table>
 <table>
   <tr>
-    <td>Jourmottagningar i lista</td>
-    <td>Detaljer</td>
+    <td>*Jourmottagningar i lista*</td>
+    <td>*Detaljer*</td>
   </tr>
   <tr>
     <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/jourmottagningar-lista-small.png</td>
