@@ -12,7 +12,7 @@ Vill du söka hela vårdutbudet i Västra Götaland, gå till sökfunktionen Hit
 
 _Beskrivning från: http://itunes.apple.com/
 
-Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
+Teknisk dokumentation finns beskriven som [http://code.google.com/p/oppna-program-hsatools-iphoneapp/wiki/BeskrivningHrivIphoneApp Teknisk beskrivning]
 
 = Bilder =
 
@@ -36,6 +36,3 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
     <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/information-small.png</td>
   </tr>
 </table>
-
-
-oppna-program-hsatools-iphoneapp\wiki\bilder
