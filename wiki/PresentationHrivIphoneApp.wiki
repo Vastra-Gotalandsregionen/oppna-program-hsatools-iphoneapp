@@ -22,8 +22,8 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
     <td>Vårdcentraler på karta</td>
   </tr>
   <tr>
-    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/hitta-vard-small.png</td>
-    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/vårdcentraler-karta-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/hitta-vard-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/vårdcentraler-karta-small.png</td>
   </tr>
   <tr>
     <td></td>
@@ -34,7 +34,10 @@ Teknisk dokumentation finns beskriven som BeskrivningHrivIphoneApp
     <td>Detaljer</td>
   </tr>
   <tr>
-    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/jourmottagningar-lista-small.png</td>
-    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/wiki/bilder/information-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/jourmottagningar-lista-small.png</td>
+    <td>http://oppna-program-hsatools-iphoneapp.googlecode.com/svn/wiki/bilder/information-small.png</td>
   </tr>
 </table>
+
+
+oppna-program-hsatools-iphoneapp\wiki\bilder
