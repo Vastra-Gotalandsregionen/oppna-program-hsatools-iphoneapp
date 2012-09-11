@@ -15,6 +15,7 @@ Informationen i applikationen hämtas från en webbservice som i sin tur läser 
 || 0,6 || 0,3 || DO || 2012-02-27 || La till Marcus Österberg som kontaktperson på VGR. ||
 || 0,7 || 0,3 || PB || 2012-03-06 || Uppdaterade url:erna för JSONP-anrop ||
 || 0,8 || 0,3 || PB || 2012-03-07 || Lagt till Hans Gyllensten och Susanne Lindqvist som kontaktpersoner för URL:er. ||
+|| 0,9 || 0,3 || PB || 2012-09-11 || Uppdaterat avsnittet "= REST Webservice / Backend =" med beskrivning av cachning samt styckeindelat avsnittet. ||
 
 = Kontaktinformation =
 || *Namn* || *Roll/Funktion* || *Företag/organisation* || *Telefon* || *E-post* ||
@@ -72,7 +73,13 @@ iPhone App Version 0.1 2010-11-01: JSON - [http://code.google.com/p/json-framewo
 Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller placeholders för URL:er som använda för att hämta data från backend. Kontakta Marcus Österberg (marcus.osterberg@vgregion.se) på VGR för att få en Security.plist med fullständiga URL:er.
 
 = REST Webservice / Backend =
-I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst). Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten måste vara betrott för att handskakningen ska vara möjligt. Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar.
+I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst).
+
+Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten lita på för att handskakningen ska vara möjligt.
+
+Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar. 
+
+Då det är ett fåtal olika http-frågor som ställs upprepat cachas resultaten för respektive fråga i tio minuter för att optimera prestanda och spara på trafik. Det får också anses vara låg frekvens som informationen uppdateras.
 
 Följande adresser anropas från mobilapplikationen för att hämta information om vårdenheter:
 
