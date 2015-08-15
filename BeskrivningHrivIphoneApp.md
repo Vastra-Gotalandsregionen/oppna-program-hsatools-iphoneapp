@@ -1,0 +1,109 @@
+# Introduktion #
+Hitta Rätt i Vården (HRIV) Mobile Application är en applikation som hjälper vårdsökanden att hitta vårdenheter över hela Västra Götalands Regionen. Applikationen tar hänsyn till vårdsökandens position och tid på dygnet. Applikationen hjälper även vårdsökanden att komma i kontakt med aktuell vårdenhet via telefon och webbsida.
+
+Informationen i applikationen hämtas från en webbservice som i sin tur läser från KIV.
+
+# Version #
+| **Dokumentversion** | **App Version** | **Författare** | **Datum** | **Beskrivning** |
+|:--------------------|:----------------|:---------------|:----------|:----------------|
+| 0,1                 | 0,1             | CT             | 2010-11-19 | Första version av dokumentet. |
+| 0,11                | 0,1             | CT             | 2011-03-23 | Uppdaterat webservice end-point adress. |
+| 0,2                 | 0,2             | DO             | 2011-10-28 | Publicerat version 2.0 av appen med bland annat nya färger. |
+| 0,3                 | 0,3             | DO             | 2011-11-01 | Flyttat och uppdaterat dokumentation. Källkod finns nu i SVN. |
+| 0,4                 | 0,3             | DO             | 2011-11-07 | La till exempel på JSON-objekt. |
+| 0,6                 | 0,3             | DO             | 2012-02-27 | La till Marcus Österberg som kontaktperson på VGR. |
+| 0,7                 | 0,3             | PB             | 2012-03-06 | Uppdaterade url:erna för JSONP-anrop |
+| 0,8                 | 0,3             | PB             | 2012-03-07 | Lagt till Hans Gyllensten och Susanne Lindqvist som kontaktpersoner för URL:er. |
+| 0,9                 | 0,3             | PB             | 2012-09-11 | Uppdaterat avsnittet "= REST Webservice / Backend =" med beskrivning av cachning samt styckeindelat avsnittet. |
+
+# Kontaktinformation #
+| **Namn** | **Roll/Funktion** | **Företag/organisation** | **Telefon** | **E-post** |
+|:---------|:------------------|:-------------------------|:------------|:-----------|
+| CT       | iOS Apputvecklare | Know IT Göteborg AB      | -           | -          |
+| TE       | Leveransansvarig  | Know IT Göteborg AB      | -           | -          |
+| AK       | Beställare        | Västra Götalands Regionen | -           | -          |
+| NN       | iOS Apputvecklare | Know IT Göteborg AB      | -           | -          |
+
+# Funktionsöversikt #
+  * hitta vårdenhet på karta eller i en lista i relation till sin egen position
+  * visar grafiskt öppet och stängda enheter men även beskrivande under detaljinformationen.
+  * visar tre typer av vårdenheter: Vårdcentral, Jourmottagning, Akutmottagning
+  * vårdtagaren kan besöka vårdenhetens webbplats.
+  * vårdtagaren kan ringa från enhetens detaljnformation till vårdenheten.
+  * kartdatan i iOS är default.
+
+# Utvecklingsmiljö #
+Projektet är utvecklat i XCode version 3.2.4.
+
+# Applikationskompatibilitet #
+| **Version** | **Datum** | **Beskrivning** | **Kompilator** |
+|:------------|:----------|:----------------|:---------------|
+| 0,1         | 2010-11-20 | Version 0.1 av applikationen är kompilerad för iOS version 4.1 med en bakåtkompatibilitet mot iOS 3.1.3. | GCC 4.2        |
+
+# Webservice översikt #
+![http://oppna-program-hsatools-iphoneapp.googlecode.com/files/HRVN_MobileApplicationArkitektur_V0.1.png](http://oppna-program-hsatools-iphoneapp.googlecode.com/files/HRVN_MobileApplicationArkitektur_V0.1.png)
+
+# 3:e Parts Bibiliotek #
+## JSON ##
+Parsar och strukturerar data i JSON format.
+iPhone App Version 0.1 2010-11-01: JSON - http://code.google.com/p/json-framework/
+
+# Modulöversikt #
+| **Modul** | **Beskrivning** |
+|:----------|:----------------|
+| Constants.h | Globala konstanter. |
+| CurrentUnitInformation.h | Globalt objekt vilket håller vilken vårdenhet som är aktiv. |
+| HRIVIPhoneAppDelegate.h | Hanterar navigation och GPS funktionalitet. |
+| UnitDataProvider.h | Ingår i Singleton mönstret. Hanterar kommunikation med webbservice. (REST format). |
+| MultipleStringObject.h | Wrapper object för att hantera text till knapparna i DetailViewController.h. |
+| AreaAnnotation.h | Annotation till kartan. Visar enheterna på kartan. |
+| CareUnit.h | Domänobjekt för alla typer av vårdenhet. |
+| DetailViewController.h | Kontrollerklass för vyn DetailvyController.xib. Hanterar detaljvyn för en vårdenhet. |
+| MapViewController.h | Kontrollerklass för vyn MapViewController.xib. Hanterar både kartvyn och listvyn med en segmented kontroller. |
+| SelectionViewController.h | Kontrollerklass för selectionView.xib. Första vyn där vårdenhetsval görs. |
+| MainView.xib | Laddar SelectionView.xib. Kontrollerklassen är HRIVIPhoneAppDelegate.h. |
+| FactoryProvider.h | Singleton klass för att ladda aktiv vårdenhet. |
+
+# Bygga HRIV Mobile Application - iPhone Version #
+  1. Öppna HRIVIPhoneApp.xcodeproj i xCode
+  1. Compilera och Bygg
+  1. Välj:
+    1. iPhone Simulator
+    1. Din iPhone
+
+# Security.plist #
+Security.plist ligger i mappen Resources i iPhone-projektet. Den innehåller placeholders för URL:er som använda för att hämta data från backend. Kontakta Marcus Österberg (marcus.osterberg@vgregion.se) på VGR för att få en Security.plist med fullständiga URL:er.
+
+# REST Webservice / Backend #
+I backend ligger det en REST Webservice som hämtar information om vårdeheter som finns i Västra Götalandsregion från Webservicen KIV (Katalog i väst).
+
+Webservicen KIV använder SOAP (Simple Object Access Protocol) vid utbyte av information och transporteras via https (Hypertext Transfer Protocol Secure). Detta innebär att kommunikationen med Webservicen KIV är kryterad, sker via SSL (Secure Sockets Layer)) och KIV Webservicen använder ett SITHS certifikat som klienten lita på för att handskakningen ska vara möjligt.
+
+Kommunikationen mellan mobilapplikationen och REST Webservicen sker via http och tillämpar JSON (JavaScript Object Notation) vid informationsutbyte. Webservicen kan även tillhandahålla JSONP-svar (JSON with Padding, se http://en.wikipedia.org/wiki/JSONP). Se tabellen nedan för hur http-frågorna ska utformas för att få tillbaka JSONP-svar.
+
+Då det är ett fåtal olika http-frågor som ställs upprepat cachas resultaten för respektive fråga i tio minuter för att optimera prestanda och spara på trafik. Det får också anses vara låg frekvens som informationen uppdateras.
+
+Följande adresser anropas från mobilapplikationen för att hämta information om vårdenheter:
+
+## Stagingserver ##
+| **End-point`*`** | **Returnerar** | **Beskrivning** |
+|:-----------------|:---------------|:----------------|
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json | Lista med JSON-objekt, se exempel GetEmergencyUnitsJson | Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp | Se föregående   |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json | Lista med JSON-objekt, se exempel GetCareUnitsJson | Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp | Se föregående   |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json | Lista med JSON-objekt, se exempel GetDutyUnitsJson | Hämtar information för alla jourcentraler som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp | Se föregående   |
+Get emergency units har ett filter som hindrar felaktigt taggade avdelningar att visas som en aktumottagning i klienter, inklusive iPhone-appen.
+
+## Produktionsserver ##
+| **End-point`*`** | **Returnerar** | **Beskrivning** |
+|:-----------------|:---------------|:----------------|
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.json | Lista med JSON-objekt, se exempel GetEmergencyUnitsJson | Hämtar information för alla akutmottagningar som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getEmergencyUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetEmergencyUnitsJsonp | Se föregående   |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.json | Lista med JSON-objekt, se exempel GetCareUnitsJson | Hämtar information för alla vårdcentraler som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getCareUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetCareUnitsJsonp | Se föregående   |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.json | Lista med JSON-objekt, se exempel GetDutyUnitsJson | Hämtar information för alla jourcentraler som finns i Västra Götalandsregion |
+| http://kontakta-vgr-for-url/hriv-mobile-ws/getDutyUnits.jsonp?callback={someCallbackFunction} | Lista med JSON-objekt, inkapslat som JSONP, se exempel GetDutyUnitsJsonp | Se föregående   |
+
+`*` Kontakta hans.gyllensten (at) vgregion.se eller susanne.e.lindqvist (at) vgregion.se för de fullständiga URL:erna.
